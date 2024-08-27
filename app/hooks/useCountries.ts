@@ -5,7 +5,7 @@ const formattedCountries = countries.map((country) => ({
   label: country.name.common,
   flag: country.flag,
   latlng: country.latlng,
-  region: country.region,
+  region: country.region
 }));
 
 const useCountries = () => {
@@ -13,12 +13,12 @@ const useCountries = () => {
 
   const getByValue = (value: string) => {
     return formattedCountries.find((item) => item.value === value);
-  }
+  };
 
   return {
     getAll,
     getByValue
-  }
+  };
 };
 
 export default useCountries;

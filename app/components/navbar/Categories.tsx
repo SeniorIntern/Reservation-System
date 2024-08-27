@@ -2,13 +2,13 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import { 
-  GiBarn, 
-  GiBoatFishing, 
-  GiCactus, 
-  GiCastle, 
-  GiCaveEntrance, 
-  GiForestCamp, 
+import {
+  GiBarn,
+  GiBoatFishing,
+  GiCactus,
+  GiCastle,
+  GiCaveEntrance,
+  GiForestCamp,
   GiIsland,
   GiWindmill
 } from 'react-icons/gi';
@@ -17,20 +17,19 @@ import { BsSnow } from 'react-icons/bs';
 import { IoDiamond } from 'react-icons/io5';
 import { MdOutlineVilla } from 'react-icons/md';
 
-import CategoryBox from "../CategoryBox";
+import CategoryBox from '../CategoryBox';
 import Container from '../Container';
-
 
 export const categories = [
   {
     label: 'Beach',
     icon: TbBeach,
-    description: 'This property is close to the beach!',
+    description: 'This property is close to the beach!'
   },
   {
     label: 'Windmills',
     icon: GiWindmill,
-    description: 'This property is has windmills!',
+    description: 'This property is has windmills!'
   },
   {
     label: 'Modern',
@@ -97,7 +96,7 @@ export const categories = [
     icon: IoDiamond,
     description: 'This property is brand new and luxurious!'
   }
-]
+];
 
 const Categories = () => {
   const params = useSearchParams();
@@ -111,18 +110,9 @@ const Categories = () => {
 
   return (
     <Container>
-      <div
-        className="
-          pt-4
-          flex 
-          flex-row 
-          items-center 
-          justify-between
-          overflow-x-auto
-        "
-      >
+      <div className="flex flex-row items-center justify-between overflow-x-auto pt-4">
         {categories.map((item) => (
-          <CategoryBox 
+          <CategoryBox
             key={item.label}
             label={item.label}
             icon={item.icon}
@@ -132,6 +122,6 @@ const Categories = () => {
       </div>
     </Container>
   );
-}
- 
+};
+
 export default Categories;
